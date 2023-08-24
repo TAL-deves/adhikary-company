@@ -1,14 +1,18 @@
 // import { Hero } from '@/component'
-import { Card } from '@/component'
-import Image from 'next/image'
+import { HeroSection, ClienSection, IntroductionSection, OurVisionSection, ServicesSection, SkeletonTest } from '@/component'
 
 export default function Home() {
   return (
     <main 
-    className="overflow-hidden"
+    className="overflow-hidden, bg-slate-900"
+    
     >
-      {/* <Hero></Hero> */}
-      <Card/>
+      <HeroSection/>
+      <IntroductionSection/>
+      <OurVisionSection/>
+      <ServicesSection/>
+      <ClienSection/>
+      {/* <SkeletonTest/> */}
     </main>
   )
 }
