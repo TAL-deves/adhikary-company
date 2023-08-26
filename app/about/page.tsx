@@ -1,10 +1,20 @@
+import { BackgroundImage, IntroductionSection, OurMissionSection, OurValusSection, OurVisionSection } from '@/component';
+import { Box, Typography } from '@mui/material';
 import React from 'react';
 
 const page = () => {
+    const backgroundImageUrl = '/hero-carousel/finance2.jpg';
+
     return (
-        <div>
-            <h1>About page</h1>
-        </div>
+        <Box>
+            <BackgroundImage backgroundImage={backgroundImageUrl}>
+            <Typography sx={{marginTop:4}} variant='h3'>About Us</Typography>
+            </BackgroundImage>,
+            <IntroductionSection/>
+            <OurVisionSection/>
+            <OurMissionSection/>
+            <OurValusSection/>
+        </Box>
     );
 };
 

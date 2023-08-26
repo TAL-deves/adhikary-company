@@ -58,7 +58,7 @@ export default function ServiceSec() {
   return (
 
     <Box sx={{ flexGrow: 1, margin:5}}>
-        <Typography variant='h3' sx={{display:"flex", justifyContent:"center", alignContent:"center", margin:2}}> Our Services</Typography>
+        <Typography variant='h3' sx={{display:"flex", justifyContent:"center", alignContent:"center", margin:2,color:"#681436"}}> Our Services</Typography>
     <Grid container spacing={2}>
         {
             OurService.map((service)=>{
@@ -73,10 +73,10 @@ export default function ServiceSec() {
                     /> */}
                     <AccountBalanceWalletIcon />
                     <CardContent>
-                      <Typography gutterBottom variant="h5" component="div">
+                      <Typography gutterBottom variant="h5" component="div" sx={{color:"#681436"}}>
                         {service.label}
                       </Typography>
-                      <Typography variant="body2" color="text.secondary">
+                      <Typography sx={{color:"#681436"}}>
                         Lizards are a widespread group of squamate reptiles, with over 6,000
                         species, ranging across all continents except Antarctica
                       </Typography>
