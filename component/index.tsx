@@ -8,6 +8,7 @@ import SkeletonTest from "./demo"
 import BackgroundImage from "./BackgroundImage"
 import OurMissionSection from "./OurMissionSec"
 import OurValusSection from "./OurValuesSec"
+// import Demo from "./demo"
 import Footer from "./Footer"
 
 
@@ -22,5 +23,6 @@ export{
     BackgroundImage,
     OurMissionSection,
     OurValusSection,
+    // Demo,
     Footer,
 }

@@ -8,7 +8,8 @@ const page = () => {
     return (
         <Box>
             <BackgroundImage backgroundImage={backgroundImageUrl}>
-            <Typography sx={{marginTop:4}} variant='h3'>About Us</Typography>
+            {/* <Typography sx={{marginTop:4}} variant='h3'>About Us</Typography> */}
+            <h1>About Us</h1>
             </BackgroundImage>,
             <IntroductionSection/>
             <OurVisionSection/>

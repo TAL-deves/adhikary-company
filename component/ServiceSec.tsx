@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
+import WarehouseIcon from '@mui/icons-material/Warehouse';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 
 const OurService = [
@@ -71,14 +72,12 @@ export default function ServiceSec() {
                       image="https://images.unsplash.com/photo-1604085572504-a392ddf0d86a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b3JhbmdlJTIwZmxvd2VyfGVufDB8fDB8fHww&w=1000&q=80"
                       title="green iguana"
                     /> */}
-                    <AccountBalanceWalletIcon />
+                    <Typography sx={{display:"flex", justifyContent:"center", alignContent:"center"}}>
+                    <WarehouseIcon sx={{color:"#681436", height:24}}/>
+                    </Typography>
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="div" sx={{color:"#681436"}}>
                         {service.label}
-                      </Typography>
-                      <Typography sx={{color:"#681436"}}>
-                        Lizards are a widespread group of squamate reptiles, with over 6,000
-                        species, ranging across all continents except Antarctica
                       </Typography>
                     </CardContent>
                   </Card>

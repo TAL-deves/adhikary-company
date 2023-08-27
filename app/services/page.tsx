@@ -9,14 +9,18 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import { BackgroundImage } from '@/component';
+import { Divider } from '@mui/material';
+// import { IntroductionSection, OurMissionSection, OurValusSection, OurVisionSection } from '@/component';
 
 export default function page() {
   const backgroundImageUrl = '/footer-bg.jpg';
   return (
 <div>
 <BackgroundImage backgroundImage={backgroundImageUrl}>
-            <Typography sx={{marginTop:4}} variant='h3'>Services</Typography>
+            <h1>Services</h1>
             </BackgroundImage>,
+            <Typography variant='h4' sx={{display:"flex", justifyContent:"center", alignContent:"center"}}>Services</Typography>
+           {/* <Demo/> */}
 </div>
   );
 }
