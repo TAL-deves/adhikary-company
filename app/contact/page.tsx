@@ -8,11 +8,11 @@ import ContactMailIcon from '@mui/icons-material/ContactMail';
 const page = () => {
     const backgroundImageUrl = '/hero-carousel/finance3.webp';
     return (
-        <Box>
+        <Box sx={{maxWidth:1400}}>
             <BackgroundImage backgroundImage={backgroundImageUrl}>
             <h1>Contact Us</h1>
             </BackgroundImage>
-            <Grid container spacing={2} sx={{mt:2}}>
+            <Grid container spacing={2} sx={{paddingX:{sm:"2%", md:"10%"}, marginY:4}}>
              <Grid xs={12} sm={6}>
                 {/* <Box> */}
                     {/* <Box>
@@ -23,10 +23,11 @@ const page = () => {
                     </Box>
                     </Box> */}
                     <Card sx={{maxWidth:450}}>
-                    <Box sx={{display:"flex", justifyContent:"center", alignContent:"center"}}>
-                        <Typography sx={{ display:"flex", justifyContent:"center", alignContent:"center"}}>
+                    <Box sx={{display:"flex", justifyContent:"center", 
+                    alignContent:"center"}}>
+                        {/* <Typography sx={{ display:"flex", justifyContent:"center", alignContent:"center"}}>
                         <ContactMailIcon sx={{color:"#681436", height:24}}/>
-                        </Typography>
+                        </Typography> */}
                     <CardContent>
                       <Typography gutterBottom variant="h4" component="div">
                       Our Address
@@ -51,8 +52,8 @@ const page = () => {
                     </Box> */}
                     <Card sx={{maxWidth:450}}>
                         <Box sx={{display:"flex", justifyContent:"center", alignContent:"center"}}>
-                        <Typography sx={{ display:"flex", justifyContent:"center", alignContent:"center"}}><MailOutlineIcon sx={{color:"#681436", height:24}}/>
-                        </Typography>
+                        {/* <Typography sx={{ display:"flex", justifyContent:"center", alignContent:"center"}}><MailOutlineIcon sx={{color:"#681436", height:24}}/>
+                        </Typography> */}
                         
                     <CardContent>
                       <Typography gutterBottom variant="h4" component="div">

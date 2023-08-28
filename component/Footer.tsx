@@ -20,11 +20,9 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import SendIcon from '@mui/icons-material/Send';
 import ColorLensRoundedIcon from '@mui/icons-material/ColorLensRounded';
 import Link from 'next/link';
+import { CardMedia } from '@mui/material';
 
 export default function Footer() {
-//   const [color, setColor] = React.useState<ColorPaletteProp>
-//     ...(color !== 'neutral' && {
-//       bgcolor: `${color}.800`, }),
 
   return (
     <Sheet
@@ -48,118 +46,129 @@ export default function Footer() {
           gap: 2,
         }}
       >
-        <Card
+<Card
           variant="soft"
           size="sm"
           sx={{
-            flexDirection: { xs: 'row', md: 'column' },
-            minWidth: { xs: '100%', md: 'auto' },
+            flexDirection: { xs: 'column' },
+            minWidth: { xs: '100%' },
             gap: 1,
           }}
         >
+     <CardMedia
+        component="img"
+        height="30%"
+        image="/LT.png"
+        alt="Logo image"
+      />
+
           {/* <AspectRatio
             ratio="21/9"
-            minHeight={80}
-            sx={{ flexBasis: { xs: 200, md: 'initial' } }}
+            minHeight={100}
+            // sx={{ width:260 }}
           >
-            <img alt="image" src="/static/blog/mui-product-comparison/ecosystem.png" />
+            <img alt="" src="/LT.png" />
           </AspectRatio> */}
           <CardContent>
-            <Typography level="body-sm">Intro to the MUI ecosystem</Typography>
+            <Typography level="body-sm">Chartered Accountants</Typography>
             <Typography level="body-xs" sx={{ mb: 0.5 }}>
-              MUI blog
+            House 07, Level 5, Road 137/141 Gulshan 1, Dhaka 1212
+            </Typography>
+            <Typography level="body-xs" sx={{ mb: 0.5 }}>
+            Email: Mohan@arccabd.com
             </Typography>
           </CardContent>
         </Card>
+
+        {/* <Card
+        variant='soft'
+         sx={{
+            flexDirection: { xs: 'row', md: 'column' },
+            minWidth: { xs: '100%', md: "50%" },
+            gap: 1,
+          }}>
+            <Typography>ADHIKARI & COMPANY</Typography>
+          <CardContent>
+            <Typography>
+              ADHIKARI & COMPANY
+            </Typography>
+          </CardContent>
+        </Card> */}
         <List
           size="sm"
           orientation="horizontal"
           wrap
           sx={{ flexGrow: 0, '--ListItem-radius': '8px' }}
         >
-          <ListItem nested sx={{ width: { xs: '50%', md: 140 } }}>
-            <ListSubheader>Sitemap</ListSubheader>
+          <ListItem nested sx={{ width: { xs: '50%', md: "50%" } }}>
+            <ListSubheader>Useful Links</ListSubheader>
+            <Divider sx={{ mr: 3 }} />
             <List>
+              <ListItem>
+                <ListItemButton>Home</ListItemButton>
+              </ListItem>
+              <ListItem>
+                <ListItemButton>About us</ListItemButton>
+              </ListItem>
               <ListItem>
                 <ListItemButton>Services</ListItemButton>
               </ListItem>
               <ListItem>
-                <ListItemButton>Blog</ListItemButton>
+                <ListItemButton>Our Team</ListItemButton>
               </ListItem>
               <ListItem>
-                <ListItemButton>Contact us</ListItemButton>
+                <ListItemButton>Our Client</ListItemButton>
+              </ListItem>
+              <ListItem>
+                <ListItemButton>Certificates</ListItemButton>
+              </ListItem>
+              <ListItem>
+                <ListItemButton>Contact</ListItemButton>
               </ListItem>
             </List>
           </ListItem>
-          <ListItem nested sx={{ width: { xs: '50%', md: 180 } }}>
-            <ListSubheader>Product</ListSubheader>
-            <List sx={{ '--ListItemDecorator-size': '32px' }}>
+          <ListItem nested sx={{ width: { xs: '50%', md: "50%" } }}>
+            <ListSubheader>Our Services</ListSubheader>
+            <Divider sx={{ mr: 3 }} />
+            <List>
               <ListItem>
                 <ListItemButton>
-                  <ListItemDecorator>
-                    {/* <img
-                      alt=""
-                      src="/static/branding/product-core-dark.svg"
-                      width="24"
-                    /> */}
-                    
-                  </ListItemDecorator>
-                  MUI Core
+                  Audit Services
                 </ListItemButton>
               </ListItem>
               <ListItem>
                 <ListItemButton>
-                  <ListItemDecorator>
-                    <img
-                      alt=""
-                      src="/static/branding/product-advanced-dark.svg"
-                      width="24"
-                    />
-                  </ListItemDecorator>
-                  MUI X
+                  Accounting Services
                 </ListItemButton>
               </ListItem>
               <ListItem>
                 <ListItemButton>
-                  <ListItemDecorator>
-                    <img
-                      alt=""
-                      src="/static/branding/product-toolpad-dark.svg"
-                      width="24"
-                    />
-                  </ListItemDecorator>
-                  MUI Toolpad
-                  <Chip
-                    variant="soft"
-                    size="sm"
-                    sx={{ minHeight: 20, fontSize: 'xs2', ml: 'auto' }}
-                  >
-                    BETA
-                  </Chip>
+                  Assurance Services
                 </ListItemButton>
               </ListItem>
               <ListItem>
                 <ListItemButton>
-                  <ListItemDecorator>
-                    <img
-                      alt=""
-                      src="/static/branding/product-designkits-dark.svg"
-                      width="24"
-                    />
-                  </ListItemDecorator>
-                  Design kits
+                  Taxation Services
                 </ListItemButton>
               </ListItem>
               <ListItem>
                 <ListItemButton>
-                  <ListItemDecorator>
-                    {/* <img
-                      alt=""
-                      src="/static/branding/product-templates-dark.svg"
-                      width="24"
-                    /> */}
-                  </ListItemDecorator>
-                  Templates
+                  Corporate VAT Services
+                </ListItemButton>
+              </ListItem>
+              <ListItem>
+                <ListItemButton>
+                  Company Affairs
+                </ListItemButton>
+              </ListItem>
+              <ListItem>
+                <ListItemButton>
+                  BIDA Affairs
+                </ListItemButton>
+              </ListItem>
+              <ListItem>
+                <ListItemButton>
+                   Other regulatory Services
                 </ListItemButton>
               </ListItem>
             </List>
