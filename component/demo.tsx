@@ -56,9 +56,6 @@ export default function SkeletonChildren() {
       <Grid item xs>
         <SkeletonChildrenDemo loading />
       </Grid>
-      {/* <Grid item xs>
-        <SkeletonChildrenDemo />
-      </Grid> */}
     </Grid>
   );
 }

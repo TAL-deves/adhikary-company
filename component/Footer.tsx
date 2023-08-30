@@ -50,8 +50,8 @@ export default function Footer() {
           variant="soft"
           size="sm"
           sx={{
-            flexDirection: { xs: 'column' },
-            minWidth: { xs: '100%' },
+            flexDirection: { xs: 'column', sm:"row" },
+            maxWidth: { xs: '100%', sm:"60%" },
             gap: 1,
           }}
         >
@@ -69,7 +69,7 @@ export default function Footer() {
           >
             <img alt="" src="/LT.png" />
           </AspectRatio> */}
-          <CardContent>
+          <CardContent >
             <Typography level="body-sm">Chartered Accountants</Typography>
             <Typography level="body-xs" sx={{ mb: 0.5 }}>
             House 07, Level 5, Road 137/141 Gulshan 1, Dhaka 1212

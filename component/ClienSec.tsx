@@ -11,6 +11,12 @@ import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 
+// Import Swiper React components
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
@@ -33,27 +39,7 @@ const images = [
     label: 'Goč, Serbia',
     imgPath:
       '/clients/client-4.png',
-  },
-  // {
-  //   label: 'Goč, Serbia',
-  //   imgPath:
-  //     '/hero-carousel/hero-carousel-2.jpg',
-  // },
-  // {
-  //   label: 'Goč, Serbia',
-  //   imgPath:
-  //     '/hero-carousel/hero-carousel-3.jpg',
-  // },
-  // {
-  //   label: 'Goč, Serbia',
-  //   imgPath:
-  //     '/hero-carousel/hero-carousel-4.jpg',
-  // },
-  // {
-  //   label: 'Goč, Serbia',
-  //   imgPath:
-  //     '/hero-carousel/hero-carousel-5.jpg',
-  // },
+  }
 ];
 
 function SwipeableTextMobileStepper() {
@@ -61,13 +47,6 @@ function SwipeableTextMobileStepper() {
   const [activeStep, setActiveStep] = React.useState(2);
   const maxSteps = images.length;
 
-//   const handleNext = () => {
-//     setActiveStep((prevActiveStep) => prevActiveStep + 1);
-//   };
-
-//   const handleBack = () => {
-//     setActiveStep((prevActiveStep) => prevActiveStep - 1);
-//   };
 
   const handleStepChange = (step: number) => {
     setActiveStep(step);
@@ -75,7 +54,6 @@ function SwipeableTextMobileStepper() {
 
   return (
     <Box sx={{ maxWidth:1440, flexGrow: 1 }}>
-    
       <AutoPlaySwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}
@@ -101,6 +79,25 @@ function SwipeableTextMobileStepper() {
           </div>
         ))}
       </AutoPlaySwipeableViews>
+      <Swiper
+      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      spaceBetween={50}
+      slidesPerView={4}
+      navigation
+      pagination={{ clickable: true }}
+      scrollbar={{ draggable: true }}
+      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log('slide change')}
+    >
+      <SwiperSlide>Slide 1</SwiperSlide>
+      <SwiperSlide>Slide 2</SwiperSlide>
+      <SwiperSlide>Slide 3</SwiperSlide>
+      <SwiperSlide>Slide 4</SwiperSlide>
+      <SwiperSlide>Slide 5</SwiperSlide>
+      <SwiperSlide>Slide 6</SwiperSlide>
+      <SwiperSlide>Slide 7</SwiperSlide>
+      <SwiperSlide>Slide 8</SwiperSlide>
+    </Swiper>
     </Box>
   );
 }

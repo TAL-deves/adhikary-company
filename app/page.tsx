@@ -1,12 +1,10 @@
 // import { Hero } from '@/component'
-import { HeroSection, ClienSection, IntroductionSection, OurVisionSection, ServicesSection, SkeletonTest } from '@/component'
+import { HeroSection, ClienSection, IntroductionSection, OurVisionSection, ServicesSection } from '@/component'
 
 export default function Home() {
   return (
     <main 
-    className="overflow-hidden, bg-slate-900"
-    
-    >
+    className="overflow-hidden">
       <HeroSection/>
       <IntroductionSection/>
       <OurVisionSection/>

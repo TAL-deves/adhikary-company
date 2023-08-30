@@ -19,7 +19,7 @@ export{
     OurVisionSection,
     ServicesSection,
     ClienSection,
-    SkeletonTest,
+    // SkeletonTest,
     BackgroundImage,
     OurMissionSection,
     OurValusSection,
