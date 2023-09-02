@@ -9,6 +9,7 @@ import BackgroundImage from "./BackgroundImage"
 import OurMissionSection from "./OurMissionSec"
 import OurValusSection from "./OurValuesSec"
 // import Demo from "./demo"
+import ServicePage from "./ClientPage"
 import Footer from "./Footer"
 
 
@@ -24,5 +25,6 @@ export{
     OurMissionSection,
     OurValusSection,
     // Demo,
+    ServicePage,
     Footer,
 }
