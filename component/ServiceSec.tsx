@@ -55,7 +55,6 @@ const OurService = [
 
 export default function ServiceSec() {
 
-
   return (
 
     <Box sx={{ flexGrow: 1, margin:5}}>
