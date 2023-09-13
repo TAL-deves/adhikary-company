@@ -4,6 +4,7 @@ import { MaterialReactTable, type MRT_ColumnDef } from 'material-react-table';
 import { data, Person } from './client';
 
 export const ClientPage = () => {
+  //console.log("data", data);
   const columns: MRT_ColumnDef<Person>[] = useMemo(
     () => [
       {
@@ -21,16 +22,14 @@ export const ClientPage = () => {
       {
         accessorKey: 'imageUrl',
         header: 'Logo',
-        // Render the image using JSX
-        Cell: ({ cellData }) => (
+        CELL: (data) => (
           <img
-            src={cellData}
+            src={data}
             alt="Person"
             style={{ width: '50px', height: 'auto' }}
           />
         ),
-      },
-  
+      }
     ],
     []
   );

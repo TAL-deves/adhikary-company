@@ -21,6 +21,7 @@ import SendIcon from '@mui/icons-material/Send';
 import ColorLensRoundedIcon from '@mui/icons-material/ColorLensRounded';
 import Link from 'next/link';
 import { CardMedia } from '@mui/material';
+import Grid from '@mui/material/Grid';
 
 export default function Footer() {
 
@@ -55,12 +56,30 @@ export default function Footer() {
             gap: 1,
           }}
         >
-     <CardMedia
+
+<Box sx={{ flexGrow: 1 }}>
+      <Grid container spacing={2}>
+        <Grid item xs={12} md={8}>
+        <CardMedia
         component="img"
-        height="30%"
+        height="100%"
         image="/LT.png"
         alt="Logo image"
       />
+        </Grid>
+        <Grid item xs={12} md={4}>
+        <CardContent >
+            <h3 className='m-0'>Chartered Accountants</h3>
+            <h3>House 07, Level 5, Road 137/141 Gulshan 1, Dhaka 1212</h3>
+            <h3>Email: Mohan@arccabd.com</h3>
+          
+          </CardContent>
+        </Grid>
+     
+      </Grid>
+    </Box>
+
+
 
           {/* <AspectRatio
             ratio="21/9"
@@ -69,7 +88,7 @@ export default function Footer() {
           >
             <img alt="" src="/LT.png" />
           </AspectRatio> */}
-          <CardContent >
+          {/* <CardContent >
             <Typography level="body-sm">Chartered Accountants</Typography>
             <Typography level="body-xs" sx={{ mb: 0.5 }}>
             House 07, Level 5, Road 137/141 Gulshan 1, Dhaka 1212
@@ -77,7 +96,7 @@ export default function Footer() {
             <Typography level="body-xs" sx={{ mb: 0.5 }}>
             Email: Mohan@arccabd.com
             </Typography>
-          </CardContent>
+          </CardContent> */}
         </Card>
 
         {/* <Card

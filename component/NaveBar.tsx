@@ -14,6 +14,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import CardMedia from '@mui/material/CardMedia';
 import Image from 'next/image';
+import Link from '@mui/material/Link';
 // import Logo from "./../public/LT.png"
 
 const pages = [{name:'Home',link:"/"},
@@ -114,10 +115,12 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center" variant='h6' sx={{color: '#6E2F4A',":hover": {
+                  <Link href={page.link}>
+                   <Typography textAlign="center" variant='h6' sx={{color: '#6E2F4A',":hover": {
                   color: '#color'
               },}}>{page.name}</Typography>
-                </MenuItem>
+              </Link>
+              </MenuItem>
               ))}
             </Menu>
           </Box>
@@ -131,26 +134,6 @@ function ResponsiveAppBar() {
         height={100}
       />
           </Box>
-
-          {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
-          {/* <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            Adhikary&Com.
-          </Typography> */}
 
            {/* large device menu sec */}
           <Box sx={{ flexGrow: 0 ,fontSize: 12, display: { xs: 'none', md: 'flex' }}}>
@@ -170,35 +153,6 @@ function ResponsiveAppBar() {
             ))}
           </Box>
 
-          {/* <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px',color:"#6E2F4A" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box> */}
         </Toolbar>
       </Container>
     </AppBar>
