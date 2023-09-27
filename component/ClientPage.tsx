@@ -2,6 +2,7 @@
 import React, { useMemo } from 'react';
 import { MaterialReactTable, type MRT_ColumnDef } from 'material-react-table';
 import { data, Person } from './client';
+import Image from 'next/image';
 
 export const ClientPage = () => {
   //console.log("data", data);
@@ -22,13 +23,28 @@ export const ClientPage = () => {
       {
         accessorKey: 'imageUrl',
         header: 'Logo',
-        CELL: (data) => (
-          <img
-            src={data}
-            alt="Person"
-            style={{ width: '50px', height: 'auto' }}
+        // CELL: () => (
+        //   <>
+        //     {/* <Image
+        //       src={data}
+        //       alt="Person"
+        //       style={{ width: '50px', height: 'auto' }}
+        //     /> */}
+        //     <h1>hello</h1>
+        //   </>
+        // ),
+        Cell: ({renderedCellValue, row}) => (
+          <Image 
+          loader={()=>{
+            return `${renderedCellValue}?w=500&q=100`
+          }}
+          src={renderedCellValue}
+          alt="client-image"
+          width={100}
+          height={100}
           />
         ),
+
       }
     ],
     []
